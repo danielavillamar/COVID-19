@@ -1,10 +1,13 @@
-package com.example.covid_19
+package com.example.covid_19.Activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import androidx.databinding.DataBindingUtil
+import com.example.covid_19.Models.MainActivity
+import com.example.covid_19.Models.Calculadora
+import com.example.covid_19.R
 import com.example.covid_19.databinding.ActivityScrollingTextBinding
 import kotlinx.android.synthetic.main.activity_scrolling_text.*
 
@@ -16,12 +19,15 @@ class ScrollingText : AppCompatActivity() {
     var description: String =
         "\nLos coronavirus son una extensa familia de virus que pueden causar enfermedades tanto en animales como en humanos. En los humanos, se sabe que varios coronavirus causan infecciones respiratorias que pueden ir desde el resfriado común hasta enfermedades más graves como el síndrome respiratorio de Oriente Medio (MERS) y el síndrome respiratorio agudo severo (SRAS).El coronavirus que se ha descubierto más recientemente causa la enfermedad por coronavirus COVID-19." // Info de la OMS
 
-    private val myData: Calculadora= Calculadora(title,subtitle,description)
+    private val myData: Calculadora =
+        Calculadora(title, subtitle, description)
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_scrolling_text)
+        binding = DataBindingUtil.setContentView(this,
+            R.layout.activity_scrolling_text
+        )
         binding.myData = myData
 
         var com: Button = findViewById(R.id.comentar)
