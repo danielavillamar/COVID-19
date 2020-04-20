@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable type="com.example.covid_19.Calculadora"
+            name="myData"/>
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:contentDescription="@string/todo"
+        android:id="@+id/Wallpaper"
+        android:layout_height="94dp"
+        android:layout_width="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:srcCompat="@drawable/newwallpaper" />
+
+    <ImageView
+        android:contentDescription="@string/todo"
+        android:id="@+id/Fondo"
+        android:layout_height="45dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="68dp"
+        android:layout_width="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/presence_online" />
+
+    <Button
+        android:background="@android:drawable/btn_star_big_on"
+        android:id="@+id/star"
+        android:layout_height="27dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginTop="76dp"
+        android:layout_width="29dp"
+        app:layout_constraintEnd_toEndOf="@+id/Wallpaper"
+        app:layout_constraintHorizontal_bias="0.929"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Wallpaper" />
+
+    <TextView
+        style="@style/TitleStyle"
+        android:id="@+id/title"
+        android:text="@string/title"
+        app:fontFamily="@font/roboto"
+        app:layout_constraintBottom_toTopOf="@+id/name_edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Fondo"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <EditText
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/hint_name"
+        android:text="@{myData.name}"
+        android:id="@+id/name_edit"
+        android:importantForAutofill="no"
+        android:inputType="textShortMessage|textPersonName|textEmailAddress"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_width="0dp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@+id/age_edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <EditText
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/hint_age"
+        android:text="@{myData.age}"
+        android:id="@+id/age_edit"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_width="0dp"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@+id/name_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_edit" />
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/name_text"
+        android:layout_height="27dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_width="0dp"
+        android:text="@{myData.name}"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:fontFamily="@font/roboto"
+        app:layout_constraintBottom_toTopOf="@+id/age_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/age_edit" />
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/age_text"
+        android:layout_height="27dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_width="0dp"
+        android:text="@{myData.age}"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:fontFamily="@font/roboto"
+        app:layout_constraintBottom_toTopOf="@+id/info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_text" />
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.2"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            app:fontFamily="@font/roboto"
+            app:layout_constraintBottom_toTopOf="@+id/Virus"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/age_text" />
+
+    <Button
+        style="@style/ButtonStyle"
+        android:id="@+id/Virus"
+        android:text="@string/virus_boton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Symptoms"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        style="@style/ButtonStyle"
+        android:background="@android:color/holo_blue_dark"
+        android:id="@+id/Symptoms"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:text="@string/sintomas_boton"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Indications"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/Virus" />
+
+    <Button
+        style="@style/ButtonStyle"
+        android:background="@android:color/holo_blue_dark"
+        android:id="@+id/Indications"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_width="wrap_content"
+        android:text="@string/indications_boton"
+        android:textColor="@android:color/background_light"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/Symptoms" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

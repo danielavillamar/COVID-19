@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">COVID-19</string>
+    <string name="todo">TODO</string>
+    <string name="title">Coronavirus risk calculator</string>
+    <string name="hint_name">What is your Name?</string>
+    <string name="virus_boton">Virus</string>
+    <string name="sintomas_boton">Symptoms</string>
+    <string name="indications_boton">Indications</string>
+    <string name="hint_age">What is your age?</string>
+    <string name="info_text">People of all ages can be infected by the new <b>coronavirus</b>. Older people, and people with pre-existing medical conditions (such as asthma, diabetes, heart disease) appear to be more vulnerable to becoming severely ill with the virus.</string>
+    <string name="article_title"></string>
+    <string name="article_subtitle"></string>
+    <string name="article_text" />
+    <string name="hint_comentario">What do you think?</string>
+    <string name="text_comentar">Comment</string>
+
+</resources>
