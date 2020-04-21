@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <variable type="com.example.covid_19.Models.Calculadora"
+        <variable type="com.example.covid_19.Calculadora"
             name="myData"/>
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_height="match_parent"
     android:layout_width="match_parent"
-    tools:context=".Models.MainActivity">
+    tools:context=".MainActivity">
 
 
     <ImageView

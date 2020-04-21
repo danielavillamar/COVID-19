@@ -4,29 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <variable type="com.example.covid_19.Models.Calculadora"
+        <variable type="com.example.covid_19.Calculadora"
             name="myData"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Activity.ScrollingText">
+        tools:context=".ScrollingText">
 
         <TextView
             android:id="@+id/article_heading"
-            android:text="@{myData.title}"
+            style="@style/Heading"
+            android:text="@{myData.subtitle}"
+            android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/article_subheading"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed"
-            style="@style/Heading" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/article_subheading"
-            android:text="@{myData.subtitle}"
+            android:text="@{myData.title}"
             app:layout_constraintBottom_toTopOf="@+id/scrollView3"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -54,6 +54,7 @@
                 android:lineSpacingExtra="@dimen/line_spacing"
                 android:padding="@dimen/padding_regular"
                 android:text="@{myData.description}"
+                android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />

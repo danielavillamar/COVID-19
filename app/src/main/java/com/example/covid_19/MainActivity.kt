@@ -1,4 +1,4 @@
-package com.example.covid_19.Models
+package com.example.covid_19
 
 import androidx.appcompat.app.AppCompatActivity
 import android.content.Context
@@ -9,9 +9,6 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import com.example.covid_19.databinding.ActivityMainBinding
 import androidx.databinding.DataBindingUtil
-import com.example.covid_19.R
-import kotlinx.android.synthetic.main.activity_main.*
-
 
 
 class MainActivity : AppCompatActivity() {
@@ -32,13 +29,13 @@ class MainActivity : AppCompatActivity() {
             addName(it)
         }
         binding.Virus.setOnClickListener {
-            startActivity(Intent(this, Virus::class.java))
+            startActivity(Intent(this, ScrollingText::class.java))
         }
         binding.Symptoms.setOnClickListener {
-            startActivity(Intent(this, Indications::class.java))
+            startActivity(Intent(this, ScrollingText2::class.java))
         }
         binding.Indications.setOnClickListener {
-            startActivity(Intent(this, Symptoms::class.java))
+            startActivity(Intent(this, ScrollingText3::class.java))
         }
 
 
