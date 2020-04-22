@@ -1,12 +1,14 @@
-package com.example.covid_19
+package com.example.covid_19.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import androidx.databinding.DataBindingUtil
+import com.example.covid_19.MainActivity
+import com.example.covid_19.R
 import com.example.covid_19.databinding.ActivityScrollingText3Binding
-import com.example.covid_19.databinding.ActivityScrollingTextBinding
+import com.example.covid_19.models.Calculadora
 import kotlinx.android.synthetic.main.activity_scrolling_text.*
 
 

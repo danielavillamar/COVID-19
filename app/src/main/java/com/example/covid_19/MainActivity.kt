@@ -9,6 +9,10 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import com.example.covid_19.databinding.ActivityMainBinding
 import androidx.databinding.DataBindingUtil
+import com.example.covid_19.activities.ScrollingText
+import com.example.covid_19.activities.ScrollingText2
+import com.example.covid_19.activities.ScrollingText3
+import com.example.covid_19.models.Calculadora
 
 
 class MainActivity : AppCompatActivity() {

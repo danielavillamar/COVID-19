@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <variable type="com.example.covid_19.Calculadora"
+        <variable type="com.example.covid_19.models.Calculadora"
             name="myData"/>
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout

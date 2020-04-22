@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <variable type="com.example.covid_19.Calculadora"
+        <variable type="com.example.covid_19.models.Calculadora"
             name="myData"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".ScrollingText">
+        tools:context=".activities.ScrollingText">
 
         <TextView
             android:id="@+id/article_heading"
