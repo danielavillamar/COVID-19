@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_scrolling_text.*
 class ScrollingText : AppCompatActivity() {
     private lateinit var binding: ActivityScrollingTextBinding
     var title: String = "Virus"
-    var subtitle: String = "¿Que es Coronavirus"
+    var subtitle: String = "¿Que es Coronavirus?"
     var description: String =
         "Los coronavirus son una extensa familia de virus que pueden causar enfermedades tanto en animales como en humanos. En los humanos, se sabe que varios coronavirus causan infecciones respiratorias que pueden ir desde el resfriado común hasta enfermedades más graves como el síndrome respiratorio de Oriente Medio (MERS) y el síndrome respiratorio agudo severo (SRAS).El coronavirus que se ha descubierto más recientemente causa la enfermedad por coronavirus COVID-19." // Info de la OMS
 
@@ -41,6 +41,7 @@ class ScrollingText : AppCompatActivity() {
     }
 
 }
+
 
 
 

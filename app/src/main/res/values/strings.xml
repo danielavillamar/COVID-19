@@ -13,5 +13,7 @@
     <string name="article_text" />
     <string name="hint_comentario">What do you think?</string>
     <string name="text_comentar">Comment</string>
-
+    <string name="op1">Virus</string>
+    <string name="op2">Symptoms</string>
+    <string name="op3">Indications</string>
 </resources>

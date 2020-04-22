@@ -31,7 +31,6 @@
         android:id="@+id/Fondo"
         android:layout_height="45dp"
         android:layout_marginEnd="17dp"
-        android:layout_marginRight="17dp"
         android:layout_marginTop="68dp"
         android:layout_width="50dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -45,7 +44,6 @@
         android:id="@+id/star"
         android:layout_height="27dp"
         android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
         android:layout_marginTop="76dp"
         android:layout_width="29dp"
         app:layout_constraintEnd_toEndOf="@+id/Wallpaper"
@@ -142,30 +140,27 @@
 
         <TextView
             android:id="@+id/info"
+            style="@style/TextStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
             android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:gravity="center"
-            android:lineSpacingMultiplier="1.2"
-            android:paddingLeft="16dp"
-            android:paddingRight="16dp"
+            android:layout_marginBottom="16dp"
             app:fontFamily="@font/roboto"
             app:layout_constraintBottom_toTopOf="@+id/Virus"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/age_text" />
 
-    <Button
-        style="@style/ButtonStyle"
-        android:id="@+id/Virus"
-        android:text="@string/virus_boton"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/Symptoms"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/Virus"
+            style="@style/ButtonStyle"
+            android:layout_marginStart="16dp"
+            android:text="@string/virus_boton"
+            app:layout_constraintBaseline_toBaselineOf="@+id/Symptoms"
+            app:layout_constraintEnd_toStartOf="@+id/Symptoms"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         style="@style/ButtonStyle"
@@ -182,20 +177,20 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/Virus" />
 
-    <Button
-        style="@style/ButtonStyle"
-        android:background="@android:color/holo_blue_dark"
-        android:id="@+id/Indications"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_width="wrap_content"
-        android:text="@string/indications_boton"
-        android:textColor="@android:color/background_light"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/Symptoms" />
+        <Button
+            android:id="@+id/Indications"
+            style="@style/ButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/holo_blue_dark"
+            android:text="@string/indications_boton"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/Symptoms" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

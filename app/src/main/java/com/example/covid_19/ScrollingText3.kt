@@ -5,12 +5,13 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import androidx.databinding.DataBindingUtil
+import com.example.covid_19.databinding.ActivityScrollingText3Binding
 import com.example.covid_19.databinding.ActivityScrollingTextBinding
 import kotlinx.android.synthetic.main.activity_scrolling_text.*
 
 
 class ScrollingText3 : AppCompatActivity() {
-    private lateinit var binding: ActivityScrollingTextBinding
+    private lateinit var binding: ActivityScrollingText3Binding
     var title: String = "Indications"
     var subtitle: String = "¿Cuales son las indicaciones a seguir?"
     var description: String =

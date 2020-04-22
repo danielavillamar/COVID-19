@@ -6,6 +6,12 @@
     <data>
         <variable type="com.example.covid_19.Calculadora"
             name="myData"/>
+        <variable
+            name="done"
+            type="String" />
+        <variable
+            name="sendComment"
+            type="String" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,82 +21,76 @@
 
         <TextView
             android:id="@+id/article_heading"
-            style="@style/Heading"
-            android:text="@{myData.subtitle}"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/article_subheading"
+            style="@style/TitleStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@{myData.title}"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.445"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/article_subheading"
-            android:text="@{myData.title}"
-            app:layout_constraintBottom_toTopOf="@+id/scrollView3"
-            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/Subheading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:text="@{myData.subtitle}"
+            android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/article_heading"
-            style="@style/Subheading" />
+            app:layout_constraintTop_toBottomOf="@+id/article_heading" />
 
         <ScrollView
             android:id="@+id/scrollView3"
-            android:layout_width="0dp"
+            android:layout_width="372dp"
             android:layout_height="wrap_content"
-            android:layout_below="@id/article_subheading"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            app:layout_constraintBottom_toTopOf="@+id/log"
+            android:layout_marginTop="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/comentar"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.491"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/article_subheading">
 
             <TextView
                 android:id="@+id/article"
-                android:layout_width="0dp"
+                style="@style/TextStyle"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:lineSpacingExtra="@dimen/line_spacing"
-                android:padding="@dimen/padding_regular"
-                android:text="@{myData.description}"
-                android:textSize="12sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                android:text="@{myData.description}" />
+
         </ScrollView>
 
         <EditText
             android:id="@+id/log"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="48dp"
+            android:autofillHints=""
             android:ems="10"
+            android:fontFamily="@font/roboto"
             android:hint="@string/hint_comentario"
+            android:importantForAutofill=""
             android:inputType="textPersonName"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/comentar"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            android:importantForAutofill="no" />
+            tools:targetApi="o" />
 
         <Button
             android:id="@+id/comentar"
+            style="@style/ButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginBottom="47dp"
             android:background="@android:color/holo_green_dark"
             android:text="@string/text_comentar"
             android:textColor="#E9DFDF"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/log" />
+            app:layout_constraintEnd_toEndOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
